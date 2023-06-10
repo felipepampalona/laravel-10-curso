@@ -36,7 +36,7 @@ class SupportService
         return $this->repository->getAll($filter);
     }
 
-    public function findOne($id): stdClass
+    public function findOne($id): stdClass|null
     {
         return $this->repository->findOne($id);
     }
@@ -45,7 +45,7 @@ class SupportService
         return $this->repository->new($dto);
     }
 
-    public function update(UpdateSupportDTO $dto): stdClass
+    public function update(UpdateSupportDTO $dto): stdClass|null
     {
         return $this->repository->update($dto);
     }
